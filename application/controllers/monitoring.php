@@ -6,6 +6,9 @@ class Monitoring extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('titikmodel');
+		$this->load->helper('url');
+		$this->load->model('M_login');
+		$this->M_login->keamanan();
 	}
 
 	public function index()
@@ -36,14 +39,33 @@ class Monitoring extends CI_Controller {
 		$longitude = $this->input->post('longitude');
 		$latitude = $this->input->post('latitude');
 		$deskripsi = $this->input->post('deskripsi');
+		$data['foto']='';
+		$foto = $_FILES['foto'];
+
+			$config['upload_path'] = 'assets/foto';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+
+			$this->load->library('upload');
+			$this->upload->initialize($config);
+			if(!$this->upload->do_upload('foto')){
+				echo "upload gagal";
+			}
+			else{
+				$foto=$this->upload->data('file_name');
+				$data['foto'] = $foto;
+			}
 
 		$ArrInsert = array(
 			'kode_titik' => $kode_titik,
 			'nama_titik' => $nama_titik,
 			'longitude' => $longitude,
 			'latitude' => $latitude,
-			'deskripsi' => $deskripsi
+			'deskripsi' => $deskripsi,
+			'foto' => $foto
 		);
+		// echo "<pre>";
+		// print_r($ArrInsert);
+		// echo "</pre>";
 		$this->titikmodel->insertDataTitik($ArrInsert);
 		redirect(base_url("monitoring"));
 
@@ -75,13 +97,30 @@ class Monitoring extends CI_Controller {
 		$longitude = $this->input->post('longitude');
 		$latitude = $this->input->post('latitude');
 		$deskripsi = $this->input->post('deskripsi');
+		$data['foto']='';
+		$foto = $_FILES['foto'];
+
+			$config['upload_path'] = 'assets/foto';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+
+			$this->load->library('upload');
+			$this->upload->initialize($config);
+			if(!$this->upload->do_upload('foto')){
+				echo "upload gagal";
+			}
+			else{
+				$foto=$this->upload->data('file_name');
+				$data['foto'] = $foto;
+			}
+
 
 		$ArrUbah = array(
 
 			'nama_titik' => $nama_titik,
 			'longitude' => $longitude,
 			'latitude' => $latitude,
-			'deskripsi' => $deskripsi
+			'deskripsi' => $deskripsi,
+			'foto' => $foto
 		);
 
 		// echo "<pre>";

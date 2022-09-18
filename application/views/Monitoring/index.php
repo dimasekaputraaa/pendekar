@@ -9,7 +9,7 @@
    
 		              <div class="col-md-4 col-sm-6 col-xs-12 grid-margin stretch-card mb-3">
 		                <div class="card" style="width: 18rem;">
-		                  <img src="https://awsimages.detik.net.id/community/media/visual/2020/07/03/daun-daun-pohon-di-hutan-gunung-pegat-klaten-mulai-berguguran_169.jpeg?w=700&q=90" class="card-img-top" alt="...">
+		                  <img src="<?= base_url('assets/foto/'.$row->foto)  ?>" class="card-img-top" alt="..." style="height: 200px;">
 		                  <div class="card-body">
 		                    <h5 class="card-title"><?php echo $row->nama_titik ?></h5>
 		                    <p class="card-text" style="overflow: auto; height: 120px;"><?php echo $row->deskripsi ?></p>

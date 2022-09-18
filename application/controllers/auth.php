@@ -14,4 +14,22 @@ class Auth extends CI_Controller{
 		$this->load->view('auth/login');
 	}
 
+	public function cekLogin(){
+		$name = $this->input->post('name');
+		$password = $this->input->post('password');
+		$this->load->model('M_login');
+		$this->M_login->ambilLogin($name, $password);
+
+		// echo "<pre>";
+		// print_r($name);
+		// echo "</pre>";
+	}
+
+	public function logout(){
+		$this->session->set_userdata('name', FALSE);
+		$this->session->sess_destroy();
+		redirect('auth');
+	}
+ 
 }
+

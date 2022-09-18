@@ -42,11 +42,17 @@
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
 
-                                    <form class="user" action="<?php echo base_url('/home') ?> " method="post">
+                                    <form class="user" action="<?php echo base_url('auth/cekLogin') ?> " method="post">
+                                        <?php 
+                                            $info = $this->session->flashdata('info');
+                                            if(!empty($info)){
+                                                echo $info;
+                                            }
+                                        ?>
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" name="name" 
-                                                placeholder="Enter Username Address...">
+                                                placeholder="Enter Username...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"

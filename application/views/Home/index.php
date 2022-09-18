@@ -13,7 +13,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Total Alat</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4 titik</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $this->db->query("Select kode_titik from data_titik")->num_rows(); ?>&nbsp;&nbsp;titik</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-toolbox fa-2x text-gray-300"></i> <!-- <i class="fas fa-calendar fa-2x text-gray-300"></i> -->
