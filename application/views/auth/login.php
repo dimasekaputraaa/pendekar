@@ -49,6 +49,7 @@
                                                 echo $info;
                                             }
                                         ?>
+                                        <br>
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" name="name" 
