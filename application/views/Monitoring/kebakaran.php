@@ -18,9 +18,9 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
+                                            <td>A111</td>
+                                            <td>Titik 1</td>
+                                            <td ><a href="https://www.google.co.id/maps/place/Kendari,+Kota+Kendari,+Sulawesi+Tenggara/@-3.9848755,122.467004,12z/data=!3m1!4b1!4m5!3m4!1s0x2d98ecde0b6b7183:0x1397347f9e562fc7!8m2!3d-3.9984597!4d122.5129742" style="text-decoration:none;">Lihat Lokasi>></a></td>
                                         </tr>
                                         
                                     </tbody>

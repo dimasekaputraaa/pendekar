@@ -42,7 +42,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
 
-                                    <form class="user">
+                                    <form class="user" action="<?php echo base_url('/home') ?> " method="post">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" name="name" 
@@ -52,9 +52,7 @@
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" name="password" placeholder="Password">
                                         </div>
-                                        <?php if (!empty($output)): ?>
-                                            <?php echo $output ?>
-                                        <?php endif ?>
+                                        
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>

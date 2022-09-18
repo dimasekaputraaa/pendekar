@@ -108,7 +108,7 @@ class Monitoring extends CI_Controller {
 		$this->load->view('temp/head');
 		$this->load->view('temp/side');
 		$this->load->view('temp/topbar');
-		$this->load->view('Monitoring/kebakaran');
+		$this->load->view('Monitoring/detailMonitoring');
 		$this->load->view('temp/footer');
 	}
 

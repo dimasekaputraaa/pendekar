@@ -14,7 +14,7 @@
 		                    <h5 class="card-title"><?php echo $row->nama_titik ?></h5>
 		                    <p class="card-text" style="overflow: auto; height: 120px;"><?php echo $row->deskripsi ?></p>
 		                    <!-- <a href="#" class="btn">Detail</a> -->
-		                    <button class="btn btn-light" style="background-color: #007bff;"><a href="#" style="color: white; text-decoration: none;">Detail</a></button>
+		                    <button class="btn btn-light" style="background-color: #007bff;"><a href="<?php echo base_url('monitoring/detail')?>" style="color: white; text-decoration: none;">Detail</a></button>
 		                    <button class="btn btn-light"><a href="<?php echo base_url('monitoring/ubah')?>/<?php echo $row->kode_titik ?>" style="color:black; text-decoration: none;">Ubah</a></button>
 		                    <!-- Button trigger modal -->
 							<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
